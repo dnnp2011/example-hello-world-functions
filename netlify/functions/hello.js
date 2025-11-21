@@ -12,7 +12,7 @@ export default async () => {
               `<li>Hello at ${formatter.format(new Date())}</li>\n\n`
             )
           );
-          if (i++ >= 100) {
+          if (i++ >= 60 * 20) {
             controller.enqueue(encoder.encode("</ol></body></html>"));
             controller.close();
             clearInterval(timer);
